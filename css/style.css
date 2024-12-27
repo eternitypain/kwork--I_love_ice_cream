@@ -97,6 +97,20 @@ button {
   object-fit: contain; /* добавляем для корректного масштабирования */
 }
 
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.header__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+}
+
 /* добавляем стили для контейнера логотипа */
 .header__menu-logo {
   height: 100%;
@@ -147,7 +161,7 @@ button {
 .header__menu-list {
   display: flex;
   align-items: center;
-  gap: 30px; /* Увеличиваем расстояние между пунктами */
+  gap: 70px; /* Увеличиваем расстояние между пунктами */
 }
 
 .header__menu-link {
