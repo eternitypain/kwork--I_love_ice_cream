@@ -1,43 +1,10 @@
-// Добавьте этот код к существующему JavaScript
-function initSlider() {
-  const dots = document.querySelectorAll(".dot");
-  const slides = document.querySelectorAll(".slider-item");
-  let currentSlide = 0;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.style.display = i === index ? "block" : "none";
-    });
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === index);
-    });
-  }
-
-  // Автоматическое переключение слайдов
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }, 5000);
-
-  // Клик по точкам
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      currentSlide = i;
-      showSlide(currentSlide);
-    });
-  });
-
-  // Показываем первый слайд
-  showSlide(0);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  initSlider();
-});
+  // Фиксированный хедер
+  const header = document.querySelector('.header');
+  const main = document.querySelector('.main');
+  const headerHeight = header.offsetHeight;
 
-// ==============================//
-
-document.addEventListener("DOMContentLoaded", () => {
+  // Инициализация слайдера
   const slider = document.querySelector(".slider");
   const slides = slider.querySelectorAll(".slider-item");
   const dots = slider.querySelectorAll(".dot");
@@ -46,12 +13,19 @@ document.addEventListener("DOMContentLoaded", () => {
   let autoplayTimeout = null;
 
   function showSlide(index, withAnimation = false) {
-    if (isAnimating) return;
-    if (currentSlide === index && withAnimation) return; // Предотвращаем повторное нажатие на активную точку
+    if (currentSlide === index && withAnimation) return;
 
     // Останавливаем текущий таймаут
     if (autoplayTimeout) {
       clearTimeout(autoplayTimeout);
+    }
+
+    // Если анимация уже идет, прерываем её
+    if (isAnimating) {
+      dots.forEach((dot) => {
+        dot.classList.remove("loading");
+      });
+      isAnimating = false;
     }
 
     // Убираем все активные классы
@@ -103,7 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Обработчик клика по точкам
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
-      if (!isAnimating && currentSlide !== index) {
+      // Прерываем текущую анимацию если она есть
+      if (isAnimating) {
+        dots.forEach((d) => d.classList.remove("loading"));
+        isAnimating = false;
+      }
+      
+      if (currentSlide !== index) {
         showSlide(index, true);
       }
     });
@@ -120,41 +100,27 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoplay();
   });
 
+  // Обработчики для нижних кнопок переключения
+  document.querySelectorAll(".bottom-switch .switch-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      if (this.classList.contains("active")) return;
+
+      const dots = document.querySelectorAll(".bottom-switch .switch-btn");
+      dots.forEach((dot) => {
+        dot.classList.remove("active", "loading");
+      });
+
+      // Добавляем классы для анимации
+      this.classList.add("active", "loading");
+
+      // Убираем класс loading после завершения анимации
+      setTimeout(() => {
+        this.classList.remove("loading");
+      }, 800);
+    });
+  });
+
   // Показываем первый слайд и запускаем автопереключение
   showSlide(0, false);
   startAutoplay();
-});
-
-// // Предотвращение масштабирования через Ctrl + колесико мыши
-// document.addEventListener('wheel', function(e) {
-//   if (e.ctrlKey) {
-//       e.preventDefault();
-//   }
-// }, { passive: false });
-
-// // Предотвращение масштабирования через клавиатуру
-// document.addEventListener('keydown', function(e) {
-//   if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=')) {
-//       e.preventDefault();
-//   }
-// });
-
-// Добавляем обработчики для нижних кнопок переключения
-document.querySelectorAll(".bottom-switch .switch-btn").forEach((btn) => {
-  btn.addEventListener("click", function () {
-    if (this.classList.contains("active")) return;
-
-    const dots = document.querySelectorAll(".bottom-switch .switch-btn");
-    dots.forEach((dot) => {
-      dot.classList.remove("active", "loading");
-    });
-
-    // Добавляем классы для анимации
-    this.classList.add("active", "loading");
-
-    // Убираем класс loading после завершения анимации
-    setTimeout(() => {
-      this.classList.remove("loading");
-    }, 800);
-  });
 });

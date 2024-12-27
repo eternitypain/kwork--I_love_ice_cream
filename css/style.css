@@ -8,9 +8,9 @@ html {
 body {
   background-color: #fff;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
   font-weight: 400;
   line-height: 1.42;
+  font-size: 16px !important;
   color: #000;
   zoom: reset;
   -webkit-text-size-adjust: 100%;
@@ -278,7 +278,7 @@ th {
 }
 
 td:last-child {
-  text-align: right;
+  text-align: center;
 }
 
 /* Стили для слайдера */
@@ -340,13 +340,12 @@ th {
   background-color: #fec800; /* Желтый цвет под стиль сайта */
   color: #000;
   text-decoration: none;
-  padding: 12px 30px;
-  border-radius: 5px;
+  padding: 8px 30px;
   font-size: 16px;
   transition: background-color 0.3s ease;
   display: inline-block;
   text-align: center;
-  min-width: 200px; /* Фиксированная ширина кнопки */
+  min-width: 350px; /* Фиксированная ширина кнопки */
 }
 
 .download-price:hover {
@@ -358,7 +357,6 @@ th {
 }
 
 /* Добавляем отступы для контейнера внутри серой секции */
-
 
 /* Добавляем тень для блоков на сером фоне */
 .price-table,
@@ -595,11 +593,10 @@ th {
   }
 }
 
-
 /* =============================== Footer =============================== */
 
 .copyright-footer {
-  background-color: #FFD700; /* Желтый цвет как на изображении */
+  background-color: #ffd700; /* Желтый цвет как на изображении */
   width: 100%;
 }
 
@@ -618,11 +615,10 @@ th {
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
   .footer-content p {
-      font-size: 10px;
-      padding: 0 15px;
+    font-size: 10px;
+    padding: 0 15px;
   }
 }
-
 
 /* =============================== */
 
@@ -632,7 +628,7 @@ th {
 }
 
 .copyright-footer {
-  background-color: #FFD700;
+  background-color: #ffd700;
   padding: 15px 0;
   width: 100%;
   margin-top: 0; /* Убираем верхний отступ у футера */
@@ -648,4 +644,74 @@ th {
 main {
   flex: 1;
   margin-bottom: 0; /* Убираем отступ у основного контента */
+}
+
+/* fonts styles */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.heder {
+  line-height: 18px !important;
+  font-size: 16px !important;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border-top: 2px solid #000;
+}
+
+th,
+td {
+  padding: 8px 15px;
+  text-align: center;
+  border-bottom: 1px dashed #000;
+  border-right: 1px dashed #000;
+  height: 60px; /* Добавляем фиксированную высоту */
+  line-height: 60px; /* Добавляем line-height для вертикального центрирования */
+  vertical-align: middle; /* Обеспечиваем вертикальное центрирование */
+}
+
+/* Если у вас есть многострочный текст, используйте: */
+th,
+td {
+  height: 60px;
+  line-height: normal; /* Возвращаем нормальный line-height для многострочного текста */
+  padding: 10px 15px; /* Корректируем padding для сохранения общей высоты 60px */
+}
+
+.price__on-table {
+  font-size: 20px;
+  font-weight: 900;
+  padding-right: 50px;
+}
+
+.slider-item {
+  padding-top: 10px;
+  position: relative;
+  z-index: 90;
+  width: 100%;
+}
+
+.slider-dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  z-index: 100;
+}
+
+.slider {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
 }
