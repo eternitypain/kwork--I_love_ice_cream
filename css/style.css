@@ -271,7 +271,6 @@ button {
 }
 
 .price__svg{
-  color: #fe0000 !important;
   fill: #fe0000 !important;
 }
 
@@ -326,6 +325,10 @@ td:last-child {
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+}
+.slider-item-img {
+  width: 470px !important;
+  height: 700px !important;
 }
 
 .dot {
