@@ -41,22 +41,10 @@ button {
   width: 100%;
 }
 
-.container__header-bottom {
-  max-width: 1330px;
-  margin: 0 auto;
-  background-color: #fec800;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Равномерно распределяем пункты меню */
-  flex-grow: 1;
-}
+
 
 .container__header-top {
-  max-width: 1330px;
+  max-width: 1630px;
   height: 70px;
   margin: 0 auto;
   background-color: #fec800;
@@ -118,27 +106,15 @@ button {
   height: 100%;
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
-.header__menu-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-content: center;
-  gap: 30px;
-  margin-left: 0px;
-}
+
 
 /* =============================== */
-.container__header-bottom {
-  max-width: 1330px;
-  margin: 0 auto;
-  height: 50px; /* Задаём конкретную высоту для нижней части хедера */
-}
 
-.header__menu-nav {
-  height: 100%; /* Растягиваем на всю высоту родителя */
-}
+
+
 
 .header__menu-logo {
   height: 70px; /* Задаём конкретную высоту для контейнера логотипа */
@@ -150,89 +126,6 @@ button {
   width: auto;
   object-fit: contain;
   display: block; /* Убираем возможные отступы снизу */
-}
-
-/* =============================== */
-.header__menu-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Равномерное распределение элементов */
-  width: 100%;
-}
-
-.header__menu-list {
-  display: flex;
-  align-items: center;
-  gap: 70px; /* Увеличиваем расстояние между пунктами */
-}
-
-.header__menu-link {
-  color: #000;
-  text-decoration: none;
-  font-size: 16px; /* Увеличиваем размер шрифта */
-  font-weight: 400;
-  white-space: nowrap; /* Предотвращаем перенос текста */
-}
-
-/* Стили для кнопок */
-.header__menu-item--button {
-  color: #000;
-  text-decoration: none;
-  font-size: 16px; /* Увеличиваем размер шрифта */
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-/* Создать макет */
-.header__menu-item--orange {
-  border: red solid 1px;
-  border-radius: 3px;
-  padding: 8px 20px;
-}
-
-.header__menu-item--orange .header__menu-link {
-  color: red; /* Применяем красный цвет к ссылке */
-}
-
-/* Наши преимущества */
-.header__menu-item--red {
-  background-color: #ff0000;
-  border-radius: 3px;
-  padding: 8px 20px;
-}
-
-.header__menu-item--red .header__menu-link {
-  color: white; /* Применяем белый цвет к ссылке внутри красной кнопки */
-}
-
-.header__menu-nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.header__menu-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Равномерно распределяем пункты меню */
-  flex-grow: 1; /* Растягиваем список на всё доступное пространство */
-  margin-left: 30px; /* Отступ от логотипа */
-}
-
-/* Остальные стили остаются без изменений */
-
-/* =============================== */
-
-.new-year-garland {
-  width: 100%;
-  height: 60px; /* Высота изображения */
-  background-image: url("/img/newyear-garland/b-head-decor_newyear.png"); /* Путь к вашему изображению */
-  background-repeat: repeat-x;
-  background-position: center bottom;
-  background-size: auto 100%;
-  margin-top: 0px; /* Поднимаем гирлянду чтобы она немного наложилась на хедер */
-  position: relative;
-  z-index: 1;
 }
 
 .header {
