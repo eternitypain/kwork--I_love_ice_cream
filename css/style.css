@@ -87,8 +87,10 @@ button {
 .top__menu-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   align-content: center;
+  gap: 5px;
+  align-items: center;
+
 }
 
 .header__menu-logo-img {
@@ -262,6 +264,15 @@ button {
   flex: 1;
   background: #fff;
   padding: 20px;
+}
+
+.price {
+  color: #fe0000;
+}
+
+.price__svg{
+  color: #fe0000 !important;
+  fill: #fe0000 !important;
 }
 
 table {
