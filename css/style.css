@@ -18,6 +18,11 @@ body {
   -ms-text-size-adjust: 100%;
 }
 
+header {
+  background-color: #fec800;
+  width: 100%;
+}
+
 /* Фиксированные размеры для всех текстовых элементов */
 h1,
 h2,
@@ -41,10 +46,8 @@ button {
   width: 100%;
 }
 
-
-
 .container__header-top {
-  max-width: 1630px;
+  max-width: 1430px;
   height: 70px;
   margin: 0 auto;
   background-color: #fec800;
@@ -78,7 +81,6 @@ button {
   align-content: center;
   gap: 5px;
   align-items: center;
-
 }
 
 .header__menu-logo-img {
@@ -94,7 +96,7 @@ button {
   align-content: center;
 }
 
-.header__inner{
+.header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,12 +111,7 @@ button {
   margin-right: 10px;
 }
 
-
-
 /* =============================== */
-
-
-
 
 .header__menu-logo {
   height: 70px; /* Задаём конкретную высоту для контейнера логотипа */
@@ -131,6 +128,8 @@ button {
 .header {
   position: relative;
   z-index: 2;
+  background-color: #fec800;
+  width: 100%;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++ */
@@ -164,7 +163,7 @@ button {
   color: #fe0000;
 }
 
-.price__svg{
+.price__svg {
   fill: #fe0000 !important;
 }
 
@@ -173,6 +172,7 @@ table {
   border-collapse: collapse;
   font-size: 14px;
   border-top: 2px solid #000;
+  font-size: 24.5455px;
 }
 
 th,
@@ -262,12 +262,12 @@ th {
   background-color: #fec800; /* Желтый цвет под стиль сайта */
   color: #000;
   text-decoration: none;
-  padding: 8px 30px;
+  padding: 8px 15px;
   font-size: 16px;
   transition: background-color 0.3s ease;
   display: inline-block;
   text-align: center;
-  min-width: 350px; /* Фиксированная ширина кнопки */
+  min-width: 300px; /* Фиксированная ширина кнопки */
 }
 
 .download-price:hover {
@@ -560,7 +560,6 @@ th {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 main {
@@ -569,8 +568,6 @@ main {
 }
 
 /* fonts styles */
-
-
 
 .heder {
   line-height: 18px !important;
@@ -593,6 +590,7 @@ td {
   height: 60px; /* Добавляем фиксированную высоту */
   line-height: 60px; /* Добавляем line-height для вертикального центрирования */
   vertical-align: middle; /* Обеспечиваем вертикальное центрирование */
+  font-size: 24.5455px;
 }
 
 /* Если у вас есть многострочный текст, используйте: */
@@ -605,7 +603,7 @@ td {
 
 .price__on-table {
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 600;
   padding-right: 50px;
 }
 
@@ -621,7 +619,7 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   z-index: 100;
 }
 
@@ -632,7 +630,6 @@ td {
   flex-direction: column;
   z-index: 100;
 }
-
 
 .content-wrapper {
   position: relative;
@@ -708,4 +705,46 @@ td {
 
 .switch-buttons {
   margin-top: 20px;
+}
+
+.header-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(196, 196, 196, 0.712);
+}
+
+.container__header-bottom {
+  max-width: 1430px;
+  height: 70px;
+  margin: 0 auto;
+  background-color: #fec800;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header__bottom-inner {
+  width: 100%; /* добавляем полную ширину */
+  gap: 30px;
+}
+
+.bottom__menu-list {
+  display: flex;
+  gap: 30px;
+  width: 100%; /* добавляем полную ширину */
+}
+
+.bottom__menu-item {
+  list-style: none;
+  gap: 30px;
+}
+
+.bottom__menu-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.bottom__menu-link:hover {
+  text-decoration: underline;
 }
