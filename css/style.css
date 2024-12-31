@@ -18,10 +18,7 @@ body {
   -ms-text-size-adjust: 100%;
 }
 
-header {
-  background-color: #fec800;
-  width: 100%;
-}
+
 
 /* Фиксированные размеры для всех текстовых элементов */
 h1,
