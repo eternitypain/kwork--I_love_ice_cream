@@ -818,3 +818,16 @@ td {
   text-decoration: none;
   transition: color 0.5s ease; 
 }
+
+
+
+.price:hover {
+  color: #000; /* базовый цвет */
+  text-decoration: none;
+  transition: color 0.5s ease; 
+}
+
+
+
+
+/* HOVER END */
