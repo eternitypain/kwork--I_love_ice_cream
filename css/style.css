@@ -147,6 +147,9 @@ button {
 
 .file__second {
   position: absolute;
+  z-index: 1008;
+  margin-right: 93px;
+  margin-top: 10px;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++ */
