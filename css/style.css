@@ -80,6 +80,18 @@ button {
   align-items: center;
 }
 
+.top__menu-link:hover {
+  color: red;
+}
+
+.top__menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  
+}
+
 .header__menu-logo-img {
   width: auto; /* вместо width: 170px !important */
   height: 100%; /* оставляем только одно определение height */
@@ -158,6 +170,7 @@ button {
 
 .price {
   color: #fe0000;
+  font-size: 40.5px;
 }
 
 .price__svg {
@@ -260,7 +273,7 @@ th {
   color: #000;
   text-decoration: none;
   padding: 8px 15px;
-  font-size: 16px;
+  font-size: 24.5455px;
   transition: background-color 0.3s ease;
   display: inline-block;
   text-align: center;
@@ -760,4 +773,37 @@ td {
 ;
   align-items: center;
   gap: 50px;
+}
+
+
+
+/* ============== HOVER EFFECT HEADER========================= */
+
+.top__menu-link {
+  color: #000; /* базовый цвет */
+  text-decoration: none;
+  transition: color 0.5s ease; /* добавляем плавную анимацию */
+}
+
+.top__menu-link:hover {
+  color: #fe0000; /* красный цвет при наведении */
+}
+
+.bottom__menu-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.5s ease; /* добавляем плавную анимацию */
+}
+
+.bottom__menu-link:hover {
+  color: #fe0000; /* красный цвет при наведении */
+  text-decoration: none; /* убираем подчеркивание */
+}
+
+
+.price {
+  color: red; /* базовый цвет */
+  text-decoration: none;
+  transition: color 0.5s ease; 
 }
