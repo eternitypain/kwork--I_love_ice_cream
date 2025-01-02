@@ -141,6 +141,14 @@ button {
   width: 100%;
 }
 
+.file__first {
+  position: relative;
+}
+
+.file__second {
+  position: absolute;
+}
+
 /* +++++++++++++++++++++++++++++++++++++++++ */
 /* Оставляем базовые стили для секции и контейнера */
 
