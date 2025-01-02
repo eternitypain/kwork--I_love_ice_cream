@@ -694,10 +694,9 @@ td {
   display: block !important;
 }
 
-.module-container {
-  position: absolute; /* или relative в зависимости от вашей верстки */
+.module-container { /* или relative в зависимости от вашей верстки */
   width: 100%;
-  height: 100%;
+  height: 650px;
   display: none;
   z-index: 2; /* чтобы модуль был поверх слайдера */
 }
@@ -714,8 +713,9 @@ td {
 
 .module-container {
   width: 100%;
-  height: 100%;
+  height: 650px;
   display: none;
+  padding-top: 10px;
 }
 
 .slider {
