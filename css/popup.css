@@ -54,3 +54,7 @@
       transform: scale(1);
     }
   }
+
+.header__menu-logo-img {
+    cursor: pointer;
+}
