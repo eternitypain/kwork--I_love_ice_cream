@@ -181,7 +181,11 @@ button {
 
 .price {
   color: #fe0000;
-  font-size: 40.5px;
+  font-size: 24.5455px;
+}
+
+.price-item__bottom { 
+  margin-left: 250px;
 }
 
 .price__svg {
@@ -623,7 +627,7 @@ td {
 }
 
 .price__on-table {
-  font-size: 20px;
+  font-size: 40.5px;
   font-weight: 600;
   padding-right: 50px;
 }
@@ -728,15 +732,6 @@ td {
   margin-top: 20px;
 }
 
-
-
-
-
-
-
-
-
-
 .header-divider {
   width: 100%;
   height: 1px;
@@ -778,15 +773,12 @@ td {
   text-decoration: underline;
 }
 
-
 .header__top-menu {
   display: flex
 ;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
-
-
 
 /* ============== HOVER EFFECT HEADER========================= */
 
@@ -812,22 +804,16 @@ td {
   text-decoration: none; /* убираем подчеркивание */
 }
 
-
 .price {
   color: red; /* базовый цвет */
   text-decoration: none;
   transition: color 0.5s ease; 
 }
 
-
-
 .price:hover {
   color: #000; /* базовый цвет */
   text-decoration: none;
   transition: color 0.5s ease; 
 }
-
-
-
 
 /* HOVER END */
